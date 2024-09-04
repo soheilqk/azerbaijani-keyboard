@@ -36,7 +36,7 @@ class KeyboardViewController: UIInputViewController {
             ["ض", "ص", "ث", "ق", "ف", "غ", "ع", "ه", "خ", "ح", "ج"],
             ["ش", "س", "ی", "ب", "ل", "ا", "ت", "ن", "م", "ک", "گ"],
             ["ظ", "ط", "ژ", "ز", "ر", "ذ", "د", "پ", "و", "چ", "⌫"],
-            ["123", "😀", "بوشلوق", "⌄", "↲"]
+            ["123", "😀", "بوْشلوق", "⌄", "↲"]
         ]
         var previousRow: UIStackView?
 
@@ -79,7 +79,7 @@ class KeyboardViewController: UIInputViewController {
             stackView.addArrangedSubview(button)
             
             if isLastRow {
-                if key == "بوشلوق" {
+                if key == "بوْشلوق" {
                     button.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.5).isActive = true
                 } else {
                     button.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.15).isActive = true
@@ -115,7 +115,7 @@ class KeyboardViewController: UIInputViewController {
             button.setTitleColor(.black, for: .normal)
         }
         
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .regular)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .regular) // Increased font size
         button.addTarget(self, action: #selector(keyPressed(_:)), for: .touchUpInside)
 
         // Add shadow effect
@@ -135,7 +135,7 @@ class KeyboardViewController: UIInputViewController {
     @objc func keyPressed(_ sender: UIButton) {
         if let title = sender.title(for: .normal) {
             switch title {
-            case "بوشلوق":
+            case "بوْشلوق":
                 textDocumentProxy.insertText(" ")
             case "↲":
                 textDocumentProxy.insertText("\n")
@@ -187,16 +187,16 @@ class KeyboardViewController: UIInputViewController {
         
         let alternativesView = UIView()
         alternativesView.backgroundColor = UIColor(white: 0.9, alpha: 0.9)
-        alternativesView.layer.cornerRadius = 8
+        alternativesView.layer.cornerRadius = 10 // Increased corner radius
         alternativesView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(alternativesView)
         
         // Position the alternatives view above the source button
         NSLayoutConstraint.activate([
-            alternativesView.bottomAnchor.constraint(equalTo: sourceButton.topAnchor, constant: -8),
+            alternativesView.bottomAnchor.constraint(equalTo: sourceButton.topAnchor, constant: -10),
             alternativesView.centerXAnchor.constraint(equalTo: sourceButton.centerXAnchor),
-            alternativesView.heightAnchor.constraint(equalToConstant: sourceButton.frame.height),
-            alternativesView.widthAnchor.constraint(equalToConstant: CGFloat(alternatives.count) * sourceButton.frame.width)
+            alternativesView.heightAnchor.constraint(equalToConstant: sourceButton.frame.height * 1.2), // Increased height
+            alternativesView.widthAnchor.constraint(equalToConstant: CGFloat(alternatives.count) * sourceButton.frame.width * 1.2) // Increased width
         ])
         
         let stackView = UIStackView()
@@ -253,9 +253,13 @@ class KeyboardViewController: UIInputViewController {
     func getAlternatives(for key: String) -> [String] {
         switch key {
         case "ی":
-            return ["ی", "ئ", "ي"]
+            return ["ی", "ئ", "ي","ؽ"]
         case "ا":
-            return ["ا", "آ", "أ", "إ"]
+            return ["ا", "آ", "أ", "إ", "ء"]
+        case "و":
+            return ["و", "ؤ","ۆ","وْ","ۇ"]
+        case "ک":
+            return ["ک", "ݣ"]
         // Add more cases for other keys as needed
         default:
             return []
