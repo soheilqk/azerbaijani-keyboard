@@ -10,6 +10,8 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
 
     var capsLockOn = false
+    var alternativesView: UIView?
+    var currentLongPressButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +124,11 @@ class KeyboardViewController: UIInputViewController {
         button.layer.shadowOpacity = 0.1
         button.layer.shadowRadius = 0.5
 
+        // Add long press gesture recognizer
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        longPressGesture.minimumPressDuration = 0.3 // Adjust as needed
+        button.addGestureRecognizer(longPressGesture)
+
         return button
     }
 
@@ -147,6 +154,111 @@ class KeyboardViewController: UIInputViewController {
         } else if sender.image(for: .normal) != nil {
             // This is the delete button
             textDocumentProxy.deleteBackward()
+        }
+    }
+
+    @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+        guard let button = gesture.view as? UIButton, let title = button.title(for: .normal) else { return }
+        
+        switch gesture.state {
+        case .began:
+            currentLongPressButton = button
+            showAlternatives(for: title, from: button)
+        case .changed:
+            updateSelectedAlternative(at: gesture.location(in: alternativesView))
+        case .ended:
+            if let selectedAlternative = getSelectedAlternative(at: gesture.location(in: alternativesView)) {
+                textDocumentProxy.insertText(selectedAlternative)
+            }
+            hideAlternatives()
+        case .cancelled:
+            hideAlternatives()
+        default:
+            break
+        }
+    }
+
+    func showAlternatives(for key: String, from sourceButton: UIButton) {
+        let alternatives = getAlternatives(for: key)
+        guard !alternatives.isEmpty else { return }
+        
+        // Remove existing alternatives view if any
+        alternativesView?.removeFromSuperview()
+        
+        let alternativesView = UIView()
+        alternativesView.backgroundColor = UIColor(white: 0.9, alpha: 0.9)
+        alternativesView.layer.cornerRadius = 8
+        alternativesView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(alternativesView)
+        
+        // Position the alternatives view above the source button
+        NSLayoutConstraint.activate([
+            alternativesView.bottomAnchor.constraint(equalTo: sourceButton.topAnchor, constant: -8),
+            alternativesView.centerXAnchor.constraint(equalTo: sourceButton.centerXAnchor),
+            alternativesView.heightAnchor.constraint(equalToConstant: sourceButton.frame.height),
+            alternativesView.widthAnchor.constraint(equalToConstant: CGFloat(alternatives.count) * sourceButton.frame.width)
+        ])
+        
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 1
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        alternativesView.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: alternativesView.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: alternativesView.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: alternativesView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: alternativesView.trailingAnchor)
+        ])
+        
+        for alternative in alternatives {
+            let altButton = createButton(title: alternative, isSpecialKey: false)
+            altButton.isUserInteractionEnabled = false
+            stackView.addArrangedSubview(altButton)
+        }
+        
+        self.alternativesView = alternativesView
+    }
+
+    func hideAlternatives() {
+        alternativesView?.removeFromSuperview()
+        alternativesView = nil
+        currentLongPressButton = nil
+    }
+
+    func updateSelectedAlternative(at location: CGPoint) {
+        guard let alternativesView = alternativesView else { return }
+        
+        for case let button as UIButton in alternativesView.subviews.first?.subviews ?? [] {
+            let isSelected = button.frame.contains(location)
+            button.backgroundColor = isSelected ? .lightGray : .white
+        }
+    }
+
+    func getSelectedAlternative(at location: CGPoint) -> String? {
+        guard let alternativesView = alternativesView else { return nil }
+        
+        for case let button as UIButton in alternativesView.subviews.first?.subviews ?? [] {
+            if button.frame.contains(location) {
+                return button.title(for: .normal)
+            }
+        }
+        
+        return nil
+    }
+
+    func getAlternatives(for key: String) -> [String] {
+        switch key {
+        case "ی":
+            return ["ی", "ئ", "ي"]
+        case "ا":
+            return ["ا", "آ", "أ", "إ"]
+        // Add more cases for other keys as needed
+        default:
+            return []
         }
     }
 
