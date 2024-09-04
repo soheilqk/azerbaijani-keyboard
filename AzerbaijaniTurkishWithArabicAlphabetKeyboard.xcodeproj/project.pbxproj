@@ -14,6 +14,8 @@
 		5BF89D622BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF89D612BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardTests.swift */; };
 		5BF89D6C2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF89D6B2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.swift */; };
 		5BF89D6E2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF89D6D2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITestsLaunchTests.swift */; };
+		5BF89D812BC800900046BE49 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF89D802BC800900046BE49 /* KeyboardViewController.swift */; };
+		5BF89D852BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5BF89D7E2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 5BF89D4C2BC7FFE80046BE49;
 			remoteInfo = AzerbaijaniTurkishWithArabicAlphabetKeyboard;
 		};
+		5BF89D832BC800900046BE49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF89D452BC7FFE80046BE49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BF89D7D2BC800900046BE49;
+			remoteInfo = "Azerbaijani Turkish with arabic alphabet";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BF89D892BC800900046BE49 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BF89D852BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5BF89D4D2BC7FFE80046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzerbaijaniTurkishWithArabicAlphabetKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +67,9 @@
 		5BF89D672BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF89D6B2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.swift; sourceTree = "<group>"; };
 		5BF89D6D2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzerbaijaniTurkishWithArabicAlphabetKeyboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5BF89D7E2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Azerbaijani Turkish with arabic alphabet.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF89D802BC800900046BE49 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		5BF89D822BC800900046BE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BF89D7B2BC800900046BE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +110,7 @@
 				5BF89D4F2BC7FFE80046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboard */,
 				5BF89D602BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardTests */,
 				5BF89D6A2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests */,
+				5BF89D7F2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet */,
 				5BF89D4E2BC7FFE80046BE49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +121,7 @@
 				5BF89D4D2BC7FFE80046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboard.app */,
 				5BF89D5D2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardTests.xctest */,
 				5BF89D672BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.xctest */,
+				5BF89D7E2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +162,15 @@
 			path = AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests;
 			sourceTree = "<group>";
 		};
+		5BF89D7F2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet */ = {
+			isa = PBXGroup;
+			children = (
+				5BF89D802BC800900046BE49 /* KeyboardViewController.swift */,
+				5BF89D822BC800900046BE49 /* Info.plist */,
+			);
+			path = "Azerbaijani Turkish with arabic alphabet";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +181,12 @@
 				5BF89D492BC7FFE80046BE49 /* Sources */,
 				5BF89D4A2BC7FFE80046BE49 /* Frameworks */,
 				5BF89D4B2BC7FFE80046BE49 /* Resources */,
+				5BF89D892BC800900046BE49 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5BF89D842BC800900046BE49 /* PBXTargetDependency */,
 			);
 			name = AzerbaijaniTurkishWithArabicAlphabetKeyboard;
 			productName = AzerbaijaniTurkishWithArabicAlphabetKeyboard;
@@ -183,6 +229,23 @@
 			productReference = 5BF89D672BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5BF89D7D2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BF89D862BC800900046BE49 /* Build configuration list for PBXNativeTarget "Azerbaijani Turkish with arabic alphabet" */;
+			buildPhases = (
+				5BF89D7A2BC800900046BE49 /* Sources */,
+				5BF89D7B2BC800900046BE49 /* Frameworks */,
+				5BF89D7C2BC800900046BE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Azerbaijani Turkish with arabic alphabet";
+			productName = "Azerbaijani Turkish with arabic alphabet";
+			productReference = 5BF89D7E2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +267,9 @@
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 5BF89D4C2BC7FFE80046BE49;
 					};
+					5BF89D7D2BC800900046BE49 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 				};
 			};
 			buildConfigurationList = 5BF89D482BC7FFE80046BE49 /* Build configuration list for PBXProject "AzerbaijaniTurkishWithArabicAlphabetKeyboard" */;
@@ -222,6 +288,7 @@
 				5BF89D4C2BC7FFE80046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboard */,
 				5BF89D5C2BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardTests */,
 				5BF89D662BC7FFEA0046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboardUITests */,
+				5BF89D7D2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +311,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5BF89D652BC7FFEA0046BE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF89D7C2BC800900046BE49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +353,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BF89D7A2BC800900046BE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF89D812BC800900046BE49 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +373,11 @@
 			isa = PBXTargetDependency;
 			target = 5BF89D4C2BC7FFE80046BE49 /* AzerbaijaniTurkishWithArabicAlphabetKeyboard */;
 			targetProxy = 5BF89D682BC7FFEA0046BE49 /* PBXContainerItemProxy */;
+		};
+		5BF89D842BC800900046BE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BF89D7D2BC800900046BE49 /* Azerbaijani Turkish with arabic alphabet */;
+			targetProxy = 5BF89D832BC800900046BE49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,6 +504,7 @@
 		5BF89D722BC7FFEA0046BE49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -425,6 +513,7 @@
 				DEVELOPMENT_TEAM = JT6A5T3K5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "تورکجه";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,6 +535,7 @@
 		5BF89D732BC7FFEA0046BE49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +544,7 @@
 				DEVELOPMENT_TEAM = JT6A5T3K5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "تورکجه";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -548,6 +639,56 @@
 			};
 			name = Release;
 		};
+		5BF89D872BC800900046BE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JT6A5T3K5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Azerbaijani Turkish with arabic alphabet/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Azerbaijani Turkish with arabic alphabet";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soheilqk.AzerbaijaniTurkishWithArabicAlphabetKeyboard.Azerbaijani-Turkish-with-arabic-alphabet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BF89D882BC800900046BE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JT6A5T3K5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Azerbaijani Turkish with arabic alphabet/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Azerbaijani Turkish with arabic alphabet";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soheilqk.AzerbaijaniTurkishWithArabicAlphabetKeyboard.Azerbaijani-Turkish-with-arabic-alphabet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +724,15 @@
 			buildConfigurations = (
 				5BF89D782BC7FFEA0046BE49 /* Debug */,
 				5BF89D792BC7FFEA0046BE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BF89D862BC800900046BE49 /* Build configuration list for PBXNativeTarget "Azerbaijani Turkish with arabic alphabet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF89D872BC800900046BE49 /* Debug */,
+				5BF89D882BC800900046BE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

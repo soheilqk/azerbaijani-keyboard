@@ -4,10 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AzerbaijaniTurkishWithArabicAlphabetKeyboard.xcscheme_^#shared#^_</key>
+		<key>Azerbaijani Turkish with arabic alphabet.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>AzerbaijaniTurkishWithArabicAlphabetKeyboard.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5BF89D4C2BC7FFE80046BE49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BF89D7D2BC800900046BE49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
